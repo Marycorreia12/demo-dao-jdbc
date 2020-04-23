@@ -41,6 +41,13 @@ public class Program {
 		System.out.println("Inserted! New Id = " + newSeller.getId());
 		
 
+		
+		System.out.println("\n=== TEST 5: seller update ===");
+		seller = sellerDao.findById(9);
+		seller.setName("Kelvin");
+		sellerDao.update(seller);
+		System.out.println("Update completed");
+	
 	}
 
 }
