@@ -51,9 +51,10 @@ public class Program {
 		seller.setName("Kelvin");
 		seller.setEmail("Kelvin@hotmail.com");
 		seller.setBaseSalary(1000.00);
-		seller.setBirthdate(sdf.parse("31/04/2017"));
+		seller.setBirthdate(new java.sql.Date(sdf.parse("30/04/2017").getTime()+1));
 		sellerDao.update(seller);
 		System.out.println("Update completed");
+		
 		
 		System.out.println("\n=== TEST 6: seller delete ===");
 		sellerDao.deleteById(12);
